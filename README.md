@@ -26,7 +26,7 @@ The vocabulary is built directly from the characters found in the text — every
 ├── toy_example_for_self_attention/
 │   └── toy_example_self_attention.ipynb        # Notebook exploring self-attention step by step
 └── transformer/
-    ├── bigram_language_model.py                # Full transformer model (multi-head attention)
+    ├── transformer_model.py                    # Full transformer model (multi-head attention)
     └── train.py                                # Training loop for the transformer
 ```
 
@@ -62,7 +62,7 @@ The complete model, built from the concepts explored in the notebook:
 | Multi-head attention | `MultiHeadAttention` | Runs `num_heads` heads in parallel and concatenates their outputs |
 | Feed-forward block | `FeedForward` | Two-layer MLP with 4x expansion, applied per token |
 | Transformer block | `Block` | Combines multi-head attention + feed-forward with residual connections and LayerNorm |
-| Full model | `BigramLanguageModel` | Token embeddings + positional embeddings + stacked blocks + language model head |
+| Full model | `TransformerModel` | Token embeddings + positional embeddings + stacked blocks + language model head |
 
 ---
 
