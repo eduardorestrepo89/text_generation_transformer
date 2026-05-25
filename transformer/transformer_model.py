@@ -73,7 +73,7 @@ class Block(nn.Module):
         return x
 
     
-class BigramLanguageModel(nn.Module):
+class TransformerModel(nn.Module):
     
     def __init__(self,vocab_size,n_embd,block_size,num_heads, num_layers,dropout):
         super().__init__()

@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-from bigram_language_model import BigramLanguageModel
+from transformer_model import TransformerModel
 torch.manual_seed(1337)
 
 # Hyperparameters
@@ -46,7 +46,7 @@ def get_batch(split):
     x,y=x.to(device), y.to(device)
     return x,y
 
-model=BigramLanguageModel(vocab_size,n_embd,block_size,num_heads,num_layers,dropout)
+model=TransformerModel(vocab_size,n_embd,block_size,num_heads,num_layers,dropout)
 model=model.to(device)
 
 @torch.no_grad() #para que no calcule los gradientes y los almacene, como no se va a hacer un backward no es necesario calcular gradientes
